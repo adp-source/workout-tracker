@@ -1,0 +1,80 @@
+@media (min-width: 1200px){
+.container {
+    width: 970px;
+ }
+}
+
+span.input-group-addon {
+   width: 69px;
+   text-align: left;
+}
+
+.input-group .form-control {
+   width: 200px;
+}
+
+.editBtn{
+   width: 70px;
+}
+
+.deleteBtn{
+   width: 70px;
+/*   margin-left: 5px; */
+}
+
+#submitBtn{
+   width: 269px;
+}
+
+#tableName{
+   width: 18%;
+}
+
+#tableReps{
+   width: 14%;
+}
+
+#tableWeight{
+   width: 14%;
+}
+
+#tableDate{
+   width: 20%;
+}
+
+#tableLbs{
+   width: 14%;
+}
+
+#tableBtns{
+   width: 20%;
+}
+
+.table-hover>tbody>tr:hover{
+   background-color: AntiqueWhite;
+}
+
+body {
+/*   
+   background: url("http://mdbootstrap.com/img/Photos/Others/img%20(42).jpg")no-repeat center center;
+*/
+   background-size: cover;
+}
+
+.pageHeader {
+   color: darkred;
+   font-weight: 600;
+}
+
+.formHeader {
+   color: darkblue;
+   font-weight: 500;
+}
+
+.jumboFocus {
+/*   background-color: lightgrey; */
+}
+
+#output {
+   color: red;
+}
