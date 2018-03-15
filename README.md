@@ -1,4 +1,4 @@
-# workout-tracker
+# Workout-Tracker
 
 Project for CS290 - Web development.
 
