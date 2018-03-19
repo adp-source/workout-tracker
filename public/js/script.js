@@ -21,9 +21,7 @@ document.getElementById('submitBtn').addEventListener('click', function(event){
          document.getElementById('addForm').reset();
          query();
       } else {
-         document.getElementById('output').textContent = "Error in network request: " + req.statusText;
-         document.getElementById('output').classList.remove("hidden");
-         console.log(req.statusText);
+         errorMessage();
    }});
 
    req.send(
@@ -34,6 +32,12 @@ document.getElementById('submitBtn').addEventListener('click', function(event){
       'lbs=' + lbs
    );
 });
+
+function errorMessage(){
+   document.getElementById('output').textContent = "Error in network request: " + req.statusText;
+   document.getElementById('output').classList.remove("hidden");
+   console.log(req.statusText);
+}
 
 function query(){
    document.getElementById('output').textContent = "";
@@ -47,9 +51,7 @@ function query(){
          buildTable(response);
          createListeners();
       } else {
-         document.getElementById('output').textContent = "Error in network request: " + req.statusText;
-         document.getElementById('output').classList.remove("hidden");
-         console.log(req.statusText);
+         errorMessage();
    }});
    req.send(null);
 }
@@ -140,9 +142,7 @@ function deleteItem(button){
          console.log("Delete done.");
          query();
       } else {
-         document.getElementById('output').textContent = "Error in network request: " + req.statusText;
-         document.getElementById('output').classList.remove("hidden");
-         console.log(req.statusText);
+         errorMessage();
    }});
 
    req.send('id=' + itemId);
@@ -216,9 +216,7 @@ function editRequest(button){
          console.log("Edit done.");
          query();
       } else {
-         document.getElementById('output').textContent = "Error in network request: " + req.statusText;
-         document.getElementById('output').classList.remove("hidden");
-         console.log(req.statusText);
+         errorMessage();
    }});
 
    req.send(
