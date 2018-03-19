@@ -21,7 +21,7 @@ document.getElementById('submitBtn').addEventListener('click', function(event){
          document.getElementById('addForm').reset();
          query();
       } else {
-         errorMessage();
+         errorMessage(req.statusText);
    }});
 
    req.send(
@@ -33,10 +33,10 @@ document.getElementById('submitBtn').addEventListener('click', function(event){
    );
 });
 
-function errorMessage(){
-   document.getElementById('output').textContent = "Error in network request: " + req.statusText;
+function errorMessage(err){
+   document.getElementById('output').textContent = "Error in network request: " + err;
    document.getElementById('output').classList.remove("hidden");
-   console.log(req.statusText);
+   console.log(err);
 }
 
 function query(){
