@@ -2,4 +2,4 @@
 
 Project for CS290 - Web development.
 
-Front end uses pure javascript AJAX. Backend uses Node and Mysql for API endpoints.
+Single page application. Front end uses pure Javascript for AJAX interactions. Backend uses Node and MySQL for API endpoints.
