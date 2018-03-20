@@ -51,7 +51,7 @@ function query(){
          buildTable(response);
          createListeners();
       } else {
-         errorMessage();
+         errorMessage(req.statusText);
    }});
    req.send(null);
 }
@@ -142,7 +142,7 @@ function deleteItem(button){
          console.log("Delete done.");
          query();
       } else {
-         errorMessage();
+         errorMessage(req.statusText);
    }});
 
    req.send('id=' + itemId);
@@ -216,7 +216,7 @@ function editRequest(button){
          console.log("Edit done.");
          query();
       } else {
-         errorMessage();
+         errorMessage(req.statusText);
    }});
 
    req.send(
